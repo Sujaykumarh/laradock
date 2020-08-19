@@ -1,0 +1,15 @@
+version: '3'
+
+# Refrence: https://stackoverflow.com/a/53418591
+
+services:
+
+  laradock:
+    build: 
+      context: .
+    image: sujaykumarh/laradock:1.0
+
+  laradock-latest:
+    build: 
+      context: .
+    image: sujaykumarh/laradock:latest
