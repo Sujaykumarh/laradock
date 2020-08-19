@@ -5,7 +5,7 @@
 Laravel Development Environment in Docker
 
 
-For Docker container checkout [DockerHub Sujaykumarh/laradock:latest](https://hub.docker.com/repository/docker/sujaykumarh/laradock)
+For Docker container checkout [DockerHub Sujaykumarh/laradock:latest](https://hub.docker.com/r/sujaykumarh/laradock)
 
     Pull latest image
 
