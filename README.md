@@ -5,15 +5,29 @@
 Laravel Development Environment in Docker
 
 
+For Docker container checkout [DockerHub Sujaykumarh/laradock:latest](https://hub.docker.com/repository/docker/sujaykumarh/laradock)
+
+    Pull latest image
+
+        $ docker pull sujaykumarh/laradock:latest
+
+
 For Laravel Starter project check out [Sujaykumarh/laradock-starter](https://github.com/Sujaykumarh/laradock-starter)
 
+
+<br>
+<br>
 
 
 ### Original Author 
 
 original author   : https://github.com/lorisleiva
+
 LICENSE           : MIT License 
+
 LICENSE File      : https://github.com/lorisleiva/laravel-docker/blob/master/LICENSE
+
+<br>
 
 ## LICENSE
 
