@@ -11,8 +11,9 @@ For Docker container checkout [DockerHub Sujaykumarh/laradock:latest](https://hu
 
         $ docker pull sujaykumarh/laradock:latest
 
+## Starter Project
 
-For Laravel Starter project check out [Sujaykumarh/laradock-starter](https://github.com/Sujaykumarh/laradock-starter)
+For Laravel + Docker Starter project check out [Sujaykumarh/laradock-starter](https://github.com/Sujaykumarh/laradock-starter)
 
 
 <br>
