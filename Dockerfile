@@ -90,8 +90,9 @@ RUN apk del -f .build-deps
 # Create required folders for laravel
 RUN mkdir /var/www/html/storage && \
     mkdir /var/www/html/storage/logs && \
-    cd /var/www/html/storage && \
-    mkdir framework sessions views cache
+    mkdir /var/www/html/storage/framework && \
+    cd /var/www/html/storage/framework && \
+    mkdir sessions views cache
 
 # Set working directory
 WORKDIR /var/www/html
