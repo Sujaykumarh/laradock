@@ -73,9 +73,12 @@ RUN docker-php-ext-install \
     zip
 
 # Get latest Composer
+# ENV COMPOSER_HOME /composer
+# ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
+# ENV COMPOSER_ALLOW_SUPERUSER 1
 # COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Install composer
+# # Install composer
 ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
 ENV COMPOSER_ALLOW_SUPERUSER 1
