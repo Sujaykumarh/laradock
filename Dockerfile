@@ -4,6 +4,9 @@ FROM php:7.4-fpm-alpine
 # LICENSE File      : https://github.com/lorisleiva/laravel-docker/blob/master/LICENSE
 # original author   : https://github.com/lorisleiva
 
+# Other Refrences
+# https://www.digitalocean.com/community/tutorials/how-to-set-up-laravel-nginx-and-mysql-with-docker-compose
+
 # Install dev dependencies
 RUN apk add --no-cache --virtual .build-deps \
     $PHPIZE_DEPS \
@@ -31,8 +34,6 @@ RUN apk add --no-cache \
     libzip-dev \
     make \
     mysql-client \
-    nodejs \
-    nodejs-npm \
     oniguruma-dev \
     yarn \
     openssh-client \
@@ -72,6 +73,11 @@ RUN docker-php-ext-install \
     xml \
     zip
 
+# Install redis
+RUN pecl install -o -f redis \
+        &&  rm -rf /tmp/pear \
+        &&  docker-php-ext-enable redis
+
 # Get latest Composer
 # ENV COMPOSER_HOME /composer
 # ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
@@ -83,6 +89,7 @@ ENV COMPOSER_HOME /composer
 ENV PATH ./vendor/bin:/composer/vendor/bin:$PATH
 ENV COMPOSER_ALLOW_SUPERUSER 1
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+
 
 # Cleanup dev dependencies
 RUN apk del -f .build-deps
