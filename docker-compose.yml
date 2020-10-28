@@ -5,11 +5,18 @@ version: '3'
 services:
 
   # laradock:
-  #   build: 
+  #   build:
   #     context: .
   #   image: sujaykumarh/laradock:1.1
 
   laradock-latest:
-    build: 
-      context: .
+    build:
+      context: ./default
     image: sujaykumarh/laradock:latest
+
+  laradock-ffmpeg:
+    build:
+      context: ./ffmpeg
+    image: sujaykumarh/laradock:ffmpeg
+    depends_on:
+      - laradock-latest
